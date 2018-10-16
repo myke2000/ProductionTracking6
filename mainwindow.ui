@@ -18,7 +18,7 @@
     <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="Stat_Tab">
        <attribute name="title">
@@ -101,14 +101,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_6">
                <item>
-                <widget class="QLabel" name="label_8">
+                <widget class="QLabel" name="Rcv_Fail_Text">
                  <property name="text">
                   <string>Fail</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_9">
+                <widget class="QLabel" name="Rcv_Fail_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -119,14 +119,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_7">
                <item>
-                <widget class="QLabel" name="label_10">
+                <widget class="QLabel" name="Rcv_Untest_Text">
                  <property name="text">
                   <string>Untest</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_11">
+                <widget class="QLabel" name="Rcv_Untest_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -137,14 +137,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_8">
                <item>
-                <widget class="QLabel" name="label_12">
+                <widget class="QLabel" name="Rev_FailPCT_Text">
                  <property name="text">
                   <string>Fail %</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_13">
+                <widget class="QLabel" name="Rcv_FailPCT_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -157,42 +157,42 @@
            <item row="1" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="QLabel" name="label">
+              <widget class="QLabel" name="Rcv_MFG_Text">
                <property name="text">
                 <string>Manufacture</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox"/>
+              <widget class="QComboBox" name="Rcv_MFG_Cbox"/>
              </item>
             </layout>
            </item>
            <item row="1" column="1">
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <widget class="QLabel" name="label_2">
+              <widget class="QLabel" name="Rcv_CAT_Text">
                <property name="text">
                 <string>Category</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_2"/>
+              <widget class="QComboBox" name="Rcv_CAT_Cbox"/>
              </item>
             </layout>
            </item>
            <item row="1" column="2">
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
-              <widget class="QLabel" name="label_3">
+              <widget class="QLabel" name="Rcv_PROC_Text">
                <property name="text">
                 <string>Product</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_3"/>
+              <widget class="QComboBox" name="Rcv_PROC_Cbox"/>
              </item>
             </layout>
            </item>
@@ -237,7 +237,7 @@
             </rect>
            </property>
           </widget>
-          <widget class="QDateEdit" name="dateEdit">
+          <widget class="QDateEdit" name="Rcv_Date">
            <property name="geometry">
             <rect>
              <x>20</x>
@@ -306,14 +306,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
-                <widget class="QLabel" name="Time_Text_2">
+                <widget class="QLabel" name="Trav_Time_Text">
                  <property name="text">
                   <string>Time</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="Time_Label_2">
+                <widget class="QLabel" name="Trav_Time_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -324,14 +324,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_12">
                <item>
-                <widget class="QLabel" name="label_14">
+                <widget class="QLabel" name="Trav_Pass_Text">
                  <property name="text">
                   <string>Pass</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_15">
+                <widget class="QLabel" name="Trav_Pass_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>
@@ -342,14 +342,14 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_13">
                <item>
-                <widget class="QLabel" name="label_16">
+                <widget class="QLabel" name="Trav_Fail_Text">
                  <property name="text">
                   <string>Fail</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="label_17">
+                <widget class="QLabel" name="Trav_Fail_Label">
                  <property name="text">
                   <string>TextLabel</string>
                  </property>

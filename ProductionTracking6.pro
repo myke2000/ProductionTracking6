@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    proctrackingdb.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    proctrackingdb.h
 
 FORMS += \
         mainwindow.ui
