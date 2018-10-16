@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT         += sql
+QT         += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,11 +28,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    proctrackingdb.cpp
+    proctrackingdb.cpp \
+    startup.cpp
 
 HEADERS += \
         mainwindow.h \
-    proctrackingdb.h
+    proctrackingdb.h \
+    startup.h
 
 FORMS += \
         mainwindow.ui
