@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "proctrackingdb.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -19,12 +20,18 @@ MainWindow::~MainWindow()
 void MainWindow::Init()
 {
 
+    ProcTrackingDB Production;
+
+    Production.ConnectDataBase(true);
+    ui->statusBar->showMessage(Production.CurrentStatus);
+
     ui->Recv_Button->setChecked(true);
     Button_Status=0;
     Current_Button();
     ui->Shipping_Frame->hide();
     ui->Traveler_Frame->hide();
     ui->CurrentDate_Edit->setDate(QDate::currentDate());
+
 }
 
 void MainWindow::Current_Button()
@@ -107,4 +114,19 @@ void MainWindow::on_Report_Button_clicked()
     Button_Status=3;
     Current_Button();
 
+}
+
+void MainWindow::About()
+{
+
+}
+
+void MainWindow::newFile()
+{
+
+}
+
+void MainWindow::Exitpgm()
+{
+    close();
 }

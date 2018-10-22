@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2601</width>
-    <height>996</height>
+    <width>876</width>
+    <height>406</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -15,6 +15,12 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>65535</width>
+    <height>65535</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -33,6 +39,13 @@ background-colorrgb(194, 203, 250)
         <width>100</width>
         <height>0</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -152,18 +165,22 @@ background-colorrgb(194, 203, 250)
        <widget class="QFrame" name="Recv_Frame">
         <property name="minimumSize">
          <size>
-          <width>250</width>
+          <width>100</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>250</width>
+          <width>200</width>
           <height>16777215</height>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -178,35 +195,7 @@ background-colorrgb(194, 203, 250)
          <number>6</number>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_22">
-           <item>
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>Date</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDateEdit" name="Recv_Date"/>
-           </item>
-          </layout>
-         </item>
          <item row="1" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_21">
-           <item>
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>Bord Rev</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="Recv_BoardRev_CBox"/>
-           </item>
-          </layout>
-         </item>
-         <item row="2" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_23">
            <item>
             <widget class="QLabel" name="label_17">
@@ -220,7 +209,7 @@ background-colorrgb(194, 203, 250)
            </item>
           </layout>
          </item>
-         <item row="3" column="0">
+         <item row="2" column="0">
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
             <widget class="QLabel" name="label_14">
@@ -235,11 +224,38 @@ background-colorrgb(194, 203, 250)
           </layout>
          </item>
          <item row="4" column="0">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0">
           <widget class="QPushButton" name="Recv__Save_Button">
            <property name="text">
             <string>Save</string>
            </property>
           </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Bord Rev</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="Recv_BoardRev_CBox"/>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -248,15 +264,22 @@ background-colorrgb(194, 203, 250)
        <widget class="QFrame" name="Traveler_Frame">
         <property name="minimumSize">
          <size>
-          <width>250</width>
+          <width>100</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>250</width>
+          <width>200</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -265,63 +288,7 @@ background-colorrgb(194, 203, 250)
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_18">
-           <item>
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>Date</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDateEdit" name="Trav_Date"/>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_13">
-           <item>
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>Tech</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="Trav_Tech"/>
-           </item>
-          </layout>
-         </item>
-         <item row="2" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_19">
-           <item>
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>Bord Rev</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="Trav_BoarRev_CBox"/>
-           </item>
-          </layout>
-         </item>
          <item row="3" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_20">
-           <item>
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>SN#/Date Code</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="Trav_SN"/>
-           </item>
-          </layout>
-         </item>
-         <item row="4" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_14">
            <item>
             <widget class="QLabel" name="label_5">
@@ -336,20 +303,6 @@ background-colorrgb(194, 203, 250)
           </layout>
          </item>
          <item row="5" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_15">
-           <item>
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>Fail</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="Trav_Fail"/>
-           </item>
-          </layout>
-         </item>
-         <item row="6" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_16">
            <item>
             <widget class="QLabel" name="label_9">
@@ -363,7 +316,7 @@ background-colorrgb(194, 203, 250)
            </item>
           </layout>
          </item>
-         <item row="7" column="0">
+         <item row="6" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_17">
            <item>
             <widget class="QLabel" name="label_10">
@@ -378,6 +331,13 @@ background-colorrgb(194, 203, 250)
           </layout>
          </item>
          <item row="8" column="0">
+          <widget class="QPushButton" name="Trav_Save_Button">
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
             <widget class="QLabel" name="label_11">
@@ -391,12 +351,74 @@ background-colorrgb(194, 203, 250)
            </item>
           </layout>
          </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Tech</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Trav_Tech"/>
+           </item>
+          </layout>
+         </item>
          <item row="9" column="0">
-          <widget class="QPushButton" name="Trav_Save_Button">
-           <property name="text">
-            <string>Save</string>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-          </widget>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Bord Rev</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="Trav_BoarRev_CBox"/>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>SN#/Date Code</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="Trav_SN"/>
+           </item>
+          </layout>
+         </item>
+         <item row="4" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Fail</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="Trav_Fail"/>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -405,15 +427,22 @@ background-colorrgb(194, 203, 250)
        <widget class="QFrame" name="Shipping_Frame">
         <property name="minimumSize">
          <size>
-          <width>250</width>
+          <width>100</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>250</width>
+          <width>200</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -422,49 +451,7 @@ background-colorrgb(194, 203, 250)
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_8">
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Date</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QDateEdit" name="dateEdit"/>
-           </item>
-          </layout>
-         </item>
-         <item row="1" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>QTY:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="spinBox"/>
-           </item>
-          </layout>
-         </item>
          <item row="2" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_10">
-           <item>
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>Board Rev</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
-           </item>
-          </layout>
-         </item>
-         <item row="3" column="0">
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
             <widget class="QLabel" name="label_4">
@@ -478,7 +465,48 @@ background-colorrgb(194, 203, 250)
            </item>
           </layout>
          </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>QTY:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox"/>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Board Rev</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_2"/>
+           </item>
+          </layout>
+         </item>
          <item row="4" column="0">
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0">
           <widget class="QPushButton" name="Ship_Save_Button">
            <property name="text">
             <string>Save</string>
@@ -501,7 +529,14 @@ background-colorrgb(194, 203, 250)
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:rgb(185, 185, 185)</string>
+         <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}
+
+
+background-color:rgb(185, 185, 185)</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -618,6 +653,13 @@ background-colorrgb(194, 203, 250)
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QFrame" name="Table_Frame">
+          <property name="styleSheet">
+           <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
+          </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
@@ -633,6 +675,13 @@ background-colorrgb(194, 203, 250)
         </item>
         <item>
          <widget class="QFrame" name="Chart_Frame">
+          <property name="styleSheet">
+           <string notr="true">QFrame {    
+border-width: 1px;
+    border-style: solid;
+    border-color:black;
+}</string>
+          </property>
           <property name="frameShape">
            <enum>QFrame::StyledPanel</enum>
           </property>
@@ -657,7 +706,7 @@ background-colorrgb(194, 203, 250)
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2601</width>
+     <width>876</width>
      <height>21</height>
     </rect>
    </property>
@@ -677,6 +726,7 @@ background-colorrgb(194, 203, 250)
    <addaction name="menuNew"/>
    <addaction name="menuAbout"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAdd_New">
    <property name="text">
     <string>Add New</string>

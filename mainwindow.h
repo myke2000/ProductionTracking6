@@ -27,6 +27,10 @@ private slots:
 
     void on_Report_Button_clicked();
 
+    void newFile();
+    void Exitpgm();
+    void About();
+
 private:
     Ui::MainWindow *ui;
 };
