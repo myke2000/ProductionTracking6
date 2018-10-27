@@ -17,7 +17,12 @@ public:
     ~MainWindow();
     void Init();
     void Current_Button();
-    int Button_Status;
+    enum {
+        Receiving,
+        Build,
+        Ship,
+        Report
+    }  Button_Status;
     void GetInitFiles();
     QString FileLocation;
     QString SelectedFileName;

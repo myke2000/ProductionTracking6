@@ -30,7 +30,7 @@ void MainWindow::Init()
     ui->statusBar->showMessage(Production.CurrentStatus);
 
     ui->Recv_Button->setChecked(true);
-    Button_Status=0;
+    Button_Status=Receiving;
     Current_Button();
     ui->Shipping_Frame->hide();
     ui->Traveler_Frame->hide();
@@ -40,7 +40,7 @@ void MainWindow::Init()
 
 void MainWindow::Current_Button()
 {
-    if(Button_Status==0)
+    if(Button_Status==Receiving)
     {
         ui->Recv_Frame->show();
         ui->Traveler_Frame->hide();
@@ -50,9 +50,9 @@ void MainWindow::Current_Button()
         ui->Trav_button->setChecked(false);
         ui->Ship_Button->setChecked(false);
         ui->Report_Button->setChecked(false);
-        Button_Status=0;
+        Button_Status=Receiving;
     }
-    else if(Button_Status==1)
+    else if(Button_Status==Build)
     {
         ui->Recv_Frame->hide();
         ui->Traveler_Frame->show();
@@ -62,9 +62,9 @@ void MainWindow::Current_Button()
         ui->Trav_button->setChecked(true);
         ui->Ship_Button->setChecked(false);
         ui->Report_Button->setChecked(false);
-        Button_Status=1;
+        Button_Status=Build;
     }
-    else if(Button_Status==2)
+    else if(Button_Status==Ship)
     {
         ui->Recv_Frame->hide();
         ui->Traveler_Frame->hide();
@@ -74,9 +74,9 @@ void MainWindow::Current_Button()
         ui->Trav_button->setChecked(false);
         ui->Ship_Button->setChecked(true);
         ui->Report_Button->setChecked(false);
-        Button_Status=2;
+        Button_Status=Ship;
     }
-    else if(Button_Status==3)
+    else if(Button_Status==Report)
     {
         ui->Recv_Frame->hide();
         ui->Traveler_Frame->hide();
@@ -86,7 +86,7 @@ void MainWindow::Current_Button()
         ui->Trav_button->setChecked(false);
         ui->Ship_Button->setChecked(false);
         ui->Report_Button->setChecked(true);
-        Button_Status=3;
+        Button_Status=Report;
     }
     else
     {
@@ -96,26 +96,26 @@ void MainWindow::Current_Button()
 
 void MainWindow::on_Recv_Button_clicked()
 {
-    Button_Status=0;
+    Button_Status=Receiving;
     Current_Button();
 
 }
 
 void MainWindow::on_Trav_button_clicked()
 {
-    Button_Status=1;
+    Button_Status=Build;
     Current_Button();
 }
 
 void MainWindow::on_Ship_Button_clicked()
 {
-    Button_Status=2;
+    Button_Status=Ship;
     Current_Button();
 }
 
 void MainWindow::on_Report_Button_clicked()
 {
-    Button_Status=3;
+    Button_Status=Report;
     Current_Button();
 
 }
