@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <firsttimesetup.h>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +18,10 @@ public:
     void Init();
     void Current_Button();
     int Button_Status;
+    void GetInitFiles();
+    QString FileLocation;
+    QString SelectedFileName;
+
 
 private slots:
     void on_Recv_Button_clicked();
@@ -33,6 +38,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QStringList InitFiles;
+
 };
 
 #endif // MAINWINDOW_H

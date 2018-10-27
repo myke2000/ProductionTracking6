@@ -29,15 +29,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     proctrackingdb.cpp \
-    startup.cpp
+    startup.cpp \
+    firsttimesetup.cpp
 
 HEADERS += \
         mainwindow.h \
     proctrackingdb.h \
-    startup.h
+    startup.h \
+    firsttimesetup.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    firsttimesetup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

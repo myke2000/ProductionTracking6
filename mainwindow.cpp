@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "proctrackingdb.h"
+#include <QFile>
+#include <QMessageBox>
+#include <firsttimesetup.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -19,6 +22,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::Init()
 {
+    GetInitFiles();
 
     ProcTrackingDB Production;
 
@@ -129,4 +133,42 @@ void MainWindow::newFile()
 void MainWindow::Exitpgm()
 {
     close();
+}
+
+void MainWindow::GetInitFiles()
+{
+    QString CreateConfigFiles;
+    CreateConfigFiles = "ProductionTrackingDataBase.sqldb ;";
+    QFile ConfigFiles;
+    ConfigFiles.setFileName("Config.csv");
+    if(!ConfigFiles.exists())
+    {
+        FirstTimeSetup StartNewSetup;
+        if(StartNewSetup.exec()==1)
+        {
+
+           ConfigFiles.open( QFile::WriteOnly);
+           QTextStream file(&ConfigFiles);
+           file << "./ProductionTrackingDataBase.sqldb ;";
+           ConfigFiles.close();
+
+
+    }
+    else
+    {
+        QMessageBox::warning(this,"File Found", "File Found");
+    }
+
+
+    if(!ConfigFiles.open(QFile::ReadWrite | QFile::Append))
+    {
+
+    }
+    else
+    {
+
+    }
+
+
+}
 }
