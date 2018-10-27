@@ -11,6 +11,17 @@ class ProcTrackingDB
 {
 public:
     ProcTrackingDB();
+    QString ConnectDataBase(bool Open);
+    QString DisConnectDataBase(bool close);
+    QStringList Tables();
+    QString GetMyDbaseName();
+   QSqlDatabase *MyDataBase;
+   QString DBstatus();
+   QString CurrentStatus;
+
+private:
+   QString MyDbaseName;
+
 
 
 };
